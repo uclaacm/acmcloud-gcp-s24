@@ -1,23 +1,24 @@
 
 # Week 2: Intro to Google Cloud Platform
 
+Link to Slides (Coming Soon!) and Recording (Coming Soon!)
+
 # Google Cloud Storage CLI Guide
 
 This guide provides an overview of how to use the Google Cloud Command Line Interface (CLI) to interact with Google Cloud Storage (GCS). GCS is a scalable object storage service that allows you to store and retrieve data from anywhere on the internet.
 
 ## Prerequisites
 
-- A Google Cloud account. If you don't have one, you can sign up for a free trial [here](https://cloud.google.com/free).
+- A Google Cloud account. If you don't have one, you can sign up for a free trial [here](https://cloud.google.com/free). Note that although you may need to add a payment card, **you will not be charged unless you explicitly upgrade your account** as per the [docs](https://cloud.google.com/free/docs/free-cloud-features#:~:text=To%20complete%20your%20Free%20Trial,enable%20us%20to%20charge%20you.) - this requirement is largely to prevent spamming accounts.
 - Google Cloud SDK installed on your machine. Follow the installation instructions [here](https://cloud.google.com/sdk/docs/install).
 
 ## Authentication
 
 Before you can interact with GCS, you need to authenticate your Google Cloud account. Open your terminal and run:
 
-'''bash
-
+```bash
 gcloud auth login
-'''
+```
 
 A browser window will open for you to log in with your Google Cloud account and grant the necessary permissions. Once you've successfully logged in, you'll see a confirmation message in your terminal.
 
@@ -25,10 +26,9 @@ A browser window will open for you to log in with your Google Cloud account and 
 
 Buckets are the basic containers that hold your data in GCS. To create a new bucket, use the `gsutil mb` command:
 
-'''bash
-
+```bash
 gsutil mb gs://your-bucket-name
-'''
+```
 
 
 Replace `your-bucket-name` with a unique name for your bucket. Bucket names must be globally unique across all GCS users.
@@ -37,9 +37,9 @@ Replace `your-bucket-name` with a unique name for your bucket. Bucket names must
 
 To upload a file to your bucket, use the `gsutil cp` command:
 
-'''bash
+```bash
 gsutil cp path/to/your/file.txt gs://your-bucket-name
-'''
+```
 
 Replace `path/to/your/file.txt` with the path to the file you want to upload.
 
@@ -47,20 +47,17 @@ Replace `path/to/your/file.txt` with the path to the file you want to upload.
 
 To list the files in your bucket, use the `gsutil ls` command:
 
-'''bash
-
+```bash
 gsutil ls gs://your-bucket-name
-
-'''
+```
 
 ## Downloading Files
 
 To download a file from your bucket, use the `gsutil cp` command, reversing the source and destination:
 
-'''bash
-
+```bash
 gsutil cp gs://your-bucket-name/your-file.txt path/to/download/location
-'''
+```
 
 Replace `path/to/download/location` with the path where you want to download the file.
 
@@ -68,29 +65,23 @@ Replace `path/to/download/location` with the path where you want to download the
 
 To delete a file from your bucket, use the `gsutil rm` command:
 
-'''bash
+```bash
 gsutil rm gs://your-bucket-name/your-file.txt
-'''
+```
 
 To delete a bucket, first, ensure it's empty, then use the `gsutil rb` command:
 
-'''bash
+```bash
 gsutil rb gs://your-bucket-name
-'''
+```
 
 ## Conclusion
 
-You've now learned the basics of interacting with Google Cloud Storage using the Google Cloud CLI. For more advanced features and options, refer to the [official documentation](https://cloud.google.com/storage/docs).
-
-
-
-Link to Slides (Coming Soon!) and Recording (Coming Soon!)
-
-In this tutorial, we'll be creating a Google Cloud Platform account, and hosting a simple static html file as a website with Google Cloud Storage. All content in this (and subsequent) tutorials will be covered under the free tier.
+You've now learned the basics of interacting with Google Cloud Storage using the Google Cloud CLI. For more advanced features and options, refer to the [official documentation](https://cloud.google.com/storage/docs). Now we'll be hosting a simple static html file as a website with Google Cloud Storage. All content in this (and subsequent) tutorials will be covered under the free tier.
 
 ## Getting Started with Google Cloud Platform
 
-To get started you'll need ot navigate to Google Cloud's online [console](https://cloud.google.com/) and create an account. Note that although you'll need to add a payment card, **you will not be charged unless you explicitly upgrade your account** as per the [docs](https://cloud.google.com/free/docs/free-cloud-features#:~:text=To%20complete%20your%20Free%20Trial,enable%20us%20to%20charge%20you.) - this requirement is largely to prevent spamming accounts. After creating your account, let's explore the platform
+To get started you'll need ot navigate to Google Cloud's online [console](https://cloud.google.com/) and create an account (just like the previous part). After creating your account, let's explore the platform
 
 1. After verifying your account and signing in click `Console` to access GCP
 2. Find the current project you're working in - *what is it called?*
@@ -114,6 +105,6 @@ Now that we've familiarized ourselves with the platform and power of Google Clou
 The above steps were adapted from google's official [documentation](https://cloud.google.com/storage/docs/hosting-static-website)
 
 ## Additional Resources
-* 
+Coming soon!
 
 
