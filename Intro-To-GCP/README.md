@@ -1,6 +1,89 @@
 
 # Week 2: Intro to Google Cloud Platform
 
+# Google Cloud Storage CLI Guide
+
+This guide provides an overview of how to use the Google Cloud Command Line Interface (CLI) to interact with Google Cloud Storage (GCS). GCS is a scalable object storage service that allows you to store and retrieve data from anywhere on the internet.
+
+## Prerequisites
+
+- A Google Cloud account. If you don't have one, you can sign up for a free trial [here](https://cloud.google.com/free).
+- Google Cloud SDK installed on your machine. Follow the installation instructions [here](https://cloud.google.com/sdk/docs/install).
+
+## Authentication
+
+Before you can interact with GCS, you need to authenticate your Google Cloud account. Open your terminal and run:
+
+'''bash
+
+gcloud auth login
+'''
+
+A browser window will open for you to log in with your Google Cloud account and grant the necessary permissions. Once you've successfully logged in, you'll see a confirmation message in your terminal.
+
+## Creating a Bucket
+
+Buckets are the basic containers that hold your data in GCS. To create a new bucket, use the `gsutil mb` command:
+
+'''bash
+
+gsutil mb gs://your-bucket-name
+'''
+
+
+Replace `your-bucket-name` with a unique name for your bucket. Bucket names must be globally unique across all GCS users.
+
+## Uploading Files
+
+To upload a file to your bucket, use the `gsutil cp` command:
+
+'''bash
+gsutil cp path/to/your/file.txt gs://your-bucket-name
+'''
+
+Replace `path/to/your/file.txt` with the path to the file you want to upload.
+
+## Listing Files
+
+To list the files in your bucket, use the `gsutil ls` command:
+
+'''bash
+
+gsutil ls gs://your-bucket-name
+
+'''
+
+## Downloading Files
+
+To download a file from your bucket, use the `gsutil cp` command, reversing the source and destination:
+
+'''bash
+
+gsutil cp gs://your-bucket-name/your-file.txt path/to/download/location
+'''
+
+Replace `path/to/download/location` with the path where you want to download the file.
+
+## Deleting Files and Buckets
+
+To delete a file from your bucket, use the `gsutil rm` command:
+
+'''bash
+gsutil rm gs://your-bucket-name/your-file.txt
+'''
+
+To delete a bucket, first, ensure it's empty, then use the `gsutil rb` command:
+
+'''bash
+gsutil rb gs://your-bucket-name
+'''
+
+## Conclusion
+
+You've now learned the basics of interacting with Google Cloud Storage using the Google Cloud CLI. For more advanced features and options, refer to the [official documentation](https://cloud.google.com/storage/docs).
+
+
+
 Link to Slides (Coming Soon!) and Recording (Coming Soon!)
 
 In this tutorial, we'll be creating a Google Cloud Platform account, and hosting a simple static html file as a website with Google Cloud Storage. All content in this (and subsequent) tutorials will be covered under the free tier.
@@ -30,80 +113,7 @@ Now that we've familiarized ourselves with the platform and power of Google Clou
 
 The above steps were adapted from google's official [documentation](https://cloud.google.com/storage/docs/hosting-static-website)
 
-# Google Cloud Storage CLI Guide
-
-This guide provides an overview of how to use the Google Cloud Command Line Interface (CLI) to interact with Google Cloud Storage (GCS). GCS is a scalable object storage service that allows you to store and retrieve data from anywhere on the internet.
-
-## Prerequisites
-
-- A Google Cloud account. If you don't have one, you can sign up for a free trial [here](https://cloud.google.com/free).
-- Google Cloud SDK installed on your machine. Follow the installation instructions [here](https://cloud.google.com/sdk/docs/install).
-
-## Authentication
-
-Before you can interact with GCS, you need to authenticate your Google Cloud account. Open your terminal and run:
-
-'''
-gcloud auth login
-'''
-
-A browser window will open for you to log in with your Google Cloud account and grant the necessary permissions. Once you've successfully logged in, you'll see a confirmation message in your terminal.
-
-## Creating a Bucket
-
-Buckets are the basic containers that hold your data in GCS. To create a new bucket, use the `gsutil mb` command:
-
-'''
-gsutil mb gs://your-bucket-name
-'''
-
-Replace `your-bucket-name` with a unique name for your bucket. Bucket names must be globally unique across all GCS users.
-
-## Uploading Files
-
-To upload a file to your bucket, use the `gsutil cp` command:
-
-'''
-gsutil cp path/to/your/file.txt gs://your-bucket-name
-'''
-
-Replace `path/to/your/file.txt` with the path to the file you want to upload.
-
-## Listing Files
-
-To list the files in your bucket, use the `gsutil ls` command:
-
-'''
-gsutil ls gs://your-bucket-name
-'''
-
-## Downloading Files
-
-To download a file from your bucket, use the `gsutil cp` command, reversing the source and destination:
-
-'''
-gsutil cp gs://your-bucket-name/your-file.txt path/to/download/location
-'''
-
-Replace `path/to/download/location` with the path where you want to download the file.
-
-## Deleting Files and Buckets
-
-To delete a file from your bucket, use the `gsutil rm` command:
-
-'''
-gsutil rm gs://your-bucket-name/your-file.txt
-'''
-
-To delete a bucket, first, ensure it's empty, then use the `gsutil rb` command:
-
-'''
-gsutil rb gs://your-bucket-name
-'''
-
-## Conclusion
-
-You've now learned the basics of interacting with Google Cloud Storage using the Google Cloud CLI. For more advanced features and options, refer to the [official documentation](https://cloud.google.com/storage/docs).
-
 ## Additional Resources
 * 
+
+
