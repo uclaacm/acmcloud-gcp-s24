@@ -43,9 +43,9 @@ This guide provides an overview of how to use the Google Cloud Command Line Inte
 
 Before you can interact with GCS, you need to authenticate your Google Cloud account. Open your terminal and run:
 
-\`\`\`bash
+'''
 gcloud auth login
-\`\`\`
+'''
 
 A browser window will open for you to log in with your Google Cloud account and grant the necessary permissions. Once you've successfully logged in, you'll see a confirmation message in your terminal.
 
@@ -53,9 +53,9 @@ A browser window will open for you to log in with your Google Cloud account and 
 
 Buckets are the basic containers that hold your data in GCS. To create a new bucket, use the `gsutil mb` command:
 
-\`\`\`bash
+'''
 gsutil mb gs://your-bucket-name
-\`\`\`
+'''
 
 Replace `your-bucket-name` with a unique name for your bucket. Bucket names must be globally unique across all GCS users.
 
@@ -63,9 +63,9 @@ Replace `your-bucket-name` with a unique name for your bucket. Bucket names must
 
 To upload a file to your bucket, use the `gsutil cp` command:
 
-\`\`\`bash
+'''
 gsutil cp path/to/your/file.txt gs://your-bucket-name
-\`\`\`
+'''
 
 Replace `path/to/your/file.txt` with the path to the file you want to upload.
 
@@ -73,17 +73,17 @@ Replace `path/to/your/file.txt` with the path to the file you want to upload.
 
 To list the files in your bucket, use the `gsutil ls` command:
 
-\`\`\`bash
+'''
 gsutil ls gs://your-bucket-name
-\`\`\`
+'''
 
 ## Downloading Files
 
 To download a file from your bucket, use the `gsutil cp` command, reversing the source and destination:
 
-\`\`\`bash
+'''
 gsutil cp gs://your-bucket-name/your-file.txt path/to/download/location
-\`\`\`
+'''
 
 Replace `path/to/download/location` with the path where you want to download the file.
 
@@ -91,15 +91,15 @@ Replace `path/to/download/location` with the path where you want to download the
 
 To delete a file from your bucket, use the `gsutil rm` command:
 
-\`\`\`bash
+'''
 gsutil rm gs://your-bucket-name/your-file.txt
-\`\`\`
+'''
 
 To delete a bucket, first, ensure it's empty, then use the `gsutil rb` command:
 
-\`\`\`bash
+'''
 gsutil rb gs://your-bucket-name
-\`\`\`
+'''
 
 ## Conclusion
 
