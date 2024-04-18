@@ -1,7 +1,7 @@
 
 # Week 2: Intro to Google Cloud Platform
 
-Link to Slides (Coming Soon!) and Recording (Coming Soon!)
+Link to [Slides](https://docs.google.com/presentation/d/1QE4Qz-GP_z6Mt59CEw0Rc1X3a-47V5DloO1q1unIXX0/edit?usp=sharing) and [Recording](https://youtu.be/gLo8pYl_Czk)
 
 # Google Cloud Storage CLI Guide
 
